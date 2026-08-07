@@ -31,7 +31,7 @@ async function register(req, res, next) {
     return res.status(201).json({
       message: "Usuario creado",
       token,
-      user: newUser
+      user: quitarPassword(newUser)
     });
   } catch (error) {
     next(error);
@@ -58,13 +58,16 @@ async function login(req, res, next) {
     return res.status(200).json({
       message: "Login correcto",
       token,
-      user
+      user: quitarPassword(user)
     });
   } catch (error) {
     next(error);
   }
 }
-
+function quitarPassword(user) {
+  const { password, ...usuarioSeguro } = user;
+  return usuarioSeguro;
+}
 module.exports = {
   register,
   login
