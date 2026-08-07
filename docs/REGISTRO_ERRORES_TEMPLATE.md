@@ -14,8 +14,10 @@ Completar una fila por cada error detectado.
 | 8 | token.js | Está mal escrito el process.env.JWT_SECRET | Lo leímos en el archivo | Le sacamos la T de sobra |
 | 9 | authController.js | Status de éxito en donde se reportan errores | Lo vimos en los archivos del proyecto y cuando probábamos un fallo en el login, en la consola reportaba el status 200 | Pusimos los códigos correspondientes a cada situación |
 | 10 | authController.js | Faltaba usar return después de enviar respuestas de error | Probando en postman recibíamos el mensaje de error, no obstante un status incorrecto (500) | Agregamos un return en los faltantes |
-
-
+| 11 | userRoutes.js | Primero esta la funcion y luego el middleware siendo un orden incorrecto | Lo vimos en el codigo revisandolo | Cambiamos el orden |
+| 12 | token.js | El token no contiene el id, por lo que en funciones como getProfile nunca encuentra el usuario| probando la funcion getProfile nos dimos cuenta de este error | Agregamos el id a la firma |
+| 13 | authMiddleware.js | se usa decode envez de verify lo que causa que se puedan usar tokens falso | En postman probamos la ruta de get api/users/me y pegamos el token del usuario, pero al borrar o cambiar una letra, no tiraba error y mostramos los datos | Lo remplazamos por verify |
+| 14 | authMiddlewares.js |Falta de uso de try catch para la validacion del token, porque sino tira error y rompe el flujo |al probar una peticion en postman con errores se rompio y envio el codigo 500 | agregamos un try catch |
 ## Guia de calidad para el informe
 
 No alcanza con escribir "habia un error y lo arreglamos".

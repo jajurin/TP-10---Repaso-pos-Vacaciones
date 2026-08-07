@@ -2,7 +2,9 @@
 
     function signToken(user) {
       return jwt.sign(
-        { role: user.role },
+        
+        {
+          id: user.id, role: user.role },
         process.env.JWT_SECRET || "super-secret",
         { expiresIn: "2h" }
       );
