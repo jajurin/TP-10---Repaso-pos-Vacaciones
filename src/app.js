@@ -8,7 +8,7 @@ const adminRoutes = require("./routes/adminRoutes");
 const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
-
+app.use(express.json());
 app.use(morgan("dev"));
 
 app.use("/api/loginn", authRoutes);
