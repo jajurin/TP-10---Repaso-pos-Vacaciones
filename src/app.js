@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 
-app.use("/api/loginn", authRoutes);
+app.use("/api/login", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/users", adminRoutes);
 
