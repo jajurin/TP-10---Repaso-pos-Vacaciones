@@ -16,3 +16,8 @@ En cada caso expliquen:
 2. Por que ocurria.
 3. Como se soluciono.
 4. Como validaron que quedo funcionando.
+
+| N |       Archivo          |     Problema encontrado        | Como lo detectaron             |           Solucion aplicada               |
+| 1 |![alt text](image-1.png)|Se ha subido el archivo .env|Lo vimos en los archivos del proyecto|Creamos un gitignore y pusimos el .env allí|
+| 2 |![alt text](image-2.png)|algunos archvios se encuentran duplicados(scr, readme y package.json)|Lo vimos en los archivos del proyecto vimos que fucnionalidades y nombres se repetian|Eliminamos los archvios duplicados.
+  
