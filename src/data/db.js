@@ -7,7 +7,12 @@ const users = [
     role: "admin"
   }
 ];
-
+const orders = [
+      { id: "A1", total: 1250 },
+      { id: "A2", total: 4900 }
+    ];
 module.exports = {
-  users
+  users,
+  orders
 };
+

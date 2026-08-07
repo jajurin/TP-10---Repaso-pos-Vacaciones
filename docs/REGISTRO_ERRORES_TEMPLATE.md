@@ -19,6 +19,7 @@ Completar una fila por cada error detectado.
 | 13 | authMiddleware.js | se usa decode envez de verify lo que causa que se puedan usar tokens falso | En postman probamos la ruta de get api/users/me y pegamos el token del usuario, pero al borrar o cambiar una letra, no tiraba error y mostramos los datos | Lo remplazamos por verify |
 | 14 | authMiddlewares.js |Falta de uso de try catch para la validacion del token, porque sino tira error y rompe el flujo |al probar una peticion en postman con errores se rompio y envio el codigo 500 | agregamos un try catch |
 | 15 | authController.js | Cuando se incia o registra se muestra, aunque hasheada la contraseña| Lo vimos en pruebas de postman | hacemos un funcion de quitar la contraseña antes de mostar |
+| 16 | userRoutes.js | Se harcodean los pedidos, no obstante aunque sean hardcodeados deberian estar en la db.js | los vimos en el codigo | pasamos los pedidos a la db.js y luego los retornamos en useroutes.js|
 ## Guia de calidad para el informe
 
 No alcanza con escribir "habia un error y lo arreglamos".
